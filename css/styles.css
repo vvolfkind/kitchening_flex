@@ -30,6 +30,23 @@ header {
 
 }
 
+.footer-main {
+	display: flex;
+	width: 1180px;
+	height: 100px;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	background-color: #c1011b;
+}
+
+.footer-main a {
+	text-decoration: none;
+	padding: 0px 30px 0px 30px;
+	color: #fff;
+	text-transform: capitalize;
+}
+
 .container {
 	display: flex;
 	flex-direction: column;
@@ -45,33 +62,34 @@ header {
 
 .main-nav {
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 	flex-direction: row;
-	width: 100vw;
-	padding: 50px 50px 20px 50px;
+	width: 1180px;
+	padding: 50px 0px 20px 0px;
 }
 
-.main-nav a{
+.main-nav a {
 	background-color: #313338;
 	text-transform: uppercase;
 	padding: 15px 45px 15px 45px;
-	margin: 0 auto;
+
 	text-decoration: none;
 	color: white;
 }
 
 .banner {
 	display: flex;
-	width: 100vw;
-	padding: 0px 65px 20px 65px;
+	width: 1180px;
+	padding-bottom: 30px;
 }
 
 .products-grid {
 	display: flex;
-	justify-content: space-between;
+	width: 1180px;
+	justify-content: space-around;
 	flex-direction: row;
 	flex-wrap: wrap;
-	padding: 0px 60px 20px 60px;
+	padding: 0px 0px 20px 0px;
 }
 
 .product-card {
@@ -79,7 +97,7 @@ header {
 	flex-direction: column;
 	justify-content: flex-start;
 	flex-wrap: wrap;
-	width: 350px;
+	width: 380px;
 	padding-bottom: 20px;
 }
 
@@ -100,14 +118,19 @@ header {
 }
 
 .product-card a {
-	background-color: #313338;
 	text-decoration: none;
 	color: white;
-	padding: 10px;
+	padding-top: 5px;
+
+	
 }
 
 .button_vermas {
-	width: 150px;
+	display: flex;
+	justify-content: space-around;
+	width: 90px;
+	height: 30px;
+	background-color: #313338;
 }
 
 	
