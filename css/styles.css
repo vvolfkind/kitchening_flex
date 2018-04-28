@@ -9,6 +9,7 @@ ul {
 li {
 	list-style-type: none;
 }
+
 body {
 	background-image: url(../images/bg-body.png);
 }
@@ -29,6 +30,18 @@ header {
 	align-items: center;
 
 }
+/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+/* CONTAINER: El container padre, main, 
+como le digan. La landing va de arriba para abajo, 
+entonces queremos todos los otros contenedores 
+acomodados en una columna (flex-direction: column;)*/
+/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+.logo {
+	width: 180px;
+	border-radius: 90px;
+	border: 1px solid #313338;
+	margin-top: 20px;
+}
 
 .container {
 	display: flex;
@@ -37,26 +50,28 @@ header {
 	align-items: center;
 
 }
-.logo {
-	width: 180px;
-	border-radius: 90px;
-	border: 1px solid #313338;
-	margin-top: 20px;
-}
+/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+/* La nav no tiene ul, li, ol, nada, no hace falta, 
+y mientras menos contenedores y clases tengamos, 
+mejor nos podemos ubicar en las lineas de codigo que escribimos. 
 
+Menos es mas. */
+/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
 .main-nav {
 	display: flex;
 	justify-content: space-between;
+	/*La nav es una fila de elementos <a>, osea "flex-direction: row;"*/
 	flex-direction: row;
 	width: 1180px;
 	padding: 50px 0px 30px 0px;
 }
-
+/*llegamos a los <a> de main-nav y armamos los botones sin agregar button, li, DIV, nada. 
+Les dejo un ejemplo de como se hacen animaciones en CSS*/
 .main-nav a {
 	background-color: #313338;
 	text-transform: uppercase;
 	padding: 15px 45px 15px 45px;
-	/*ANIMACION DE NAVBAR*/
+	/*ANIMACION*/
 	transition: transform 0.8s;
 	text-decoration: none;
 	color: white;
@@ -72,6 +87,10 @@ header {
 	padding-bottom: 30px;
 }
 
+/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+/* grilla de productos. Le aplicamos esta clase a la <section> correspondiente.
+De nuevo, no necesitamos div de nada, 12 columnas, mas divs, nada*/
+/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
 .products-grid {
 	display: flex;
 	width: 1180px;
@@ -80,7 +99,8 @@ header {
 	flex-wrap: wrap;
 	padding: 0px 0px 20px 0px;
 }
-
+/* a cada <article> dentro de la grilla le aplicamos esta clase. Los elementos
+van de arriba abajo, de nuevo cambiamos la orientacion por defecto a column*/
 .product-card {
 	display: flex;
 	flex-direction: column;
@@ -90,30 +110,22 @@ header {
 	padding-bottom: 30px;
 }
 
+/*llegamos a cada elemento de la card de producto con la clase y el tag. 
+No necesitamos mas clases ni elementos ni divs ni nada nuevo, a exepcion del
+boton VER MAS*/
 .product-card img {
-	display: flex;
 	width: 100%;
-
+	box-shadow: 3px 3px rgba(15, 15, 15, 0.3);
 }
-
-.product-card p {
-	display: flex;
-	flex-wrap: wrap;
-}
-
 .product-card h2 {
-	display: flex;
 	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 100;
 }
-
 .product-card a {
 	text-decoration: none;
 	color: white;
 	padding-top: 5px;
-
-	
 }
-
 .button_vermas {
 	display: flex;
 	justify-content: space-around;
@@ -121,9 +133,12 @@ header {
 	height: 30px;
 	background-color: #313338;
 }
-
-	
-.footer-main {
+/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+/*Para el footer ni nos molestamos en crear una clase, trabajamos el mismo 
+tag y lo que tenga adentro. Nuevamente, no necesitamos ul, li, div, nada 
+fuera de los <a>*/
+/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+footer {
 	display: flex;
 	width: 1180px;
 	height: 120px;
@@ -135,26 +150,14 @@ header {
 	border-top-right-radius: 20px;
 }
 
-.footer-main a {
+footer a {
 	text-decoration: none;
 	padding: 0px 30px 0px 30px;
 	color: #fff;
 	text-transform: capitalize;
 	border-right: solid 1px white;
 }
-.footer-main a::-child{
+footer a::-child{
 	border-right: none;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-/**/
