@@ -30,23 +30,6 @@ header {
 
 }
 
-.footer-main {
-	display: flex;
-	width: 1180px;
-	height: 100px;
-	justify-content: center;
-	align-items: center;
-	flex-direction: row;
-	background-color: #c1011b;
-}
-
-.footer-main a {
-	text-decoration: none;
-	padding: 0px 30px 0px 30px;
-	color: #fff;
-	text-transform: capitalize;
-}
-
 .container {
 	display: flex;
 	flex-direction: column;
@@ -58,6 +41,7 @@ header {
 	width: 180px;
 	border-radius: 90px;
 	border: 1px solid #313338;
+	margin-top: 20px;
 }
 
 .main-nav {
@@ -65,16 +49,21 @@ header {
 	justify-content: space-between;
 	flex-direction: row;
 	width: 1180px;
-	padding: 50px 0px 20px 0px;
+	padding: 50px 0px 30px 0px;
 }
 
 .main-nav a {
 	background-color: #313338;
 	text-transform: uppercase;
 	padding: 15px 45px 15px 45px;
-
+	/*ANIMACION DE NAVBAR*/
+	transition: transform 0.8s;
 	text-decoration: none;
 	color: white;
+}
+/*ANIMACION DE NAVBAR HOVER*/
+.main-nav a:hover{
+    transform: scale(0.9);
 }
 
 .banner {
@@ -98,7 +87,7 @@ header {
 	justify-content: flex-start;
 	flex-wrap: wrap;
 	width: 380px;
-	padding-bottom: 20px;
+	padding-bottom: 30px;
 }
 
 .product-card img {
@@ -134,7 +123,28 @@ header {
 }
 
 	
+.footer-main {
+	display: flex;
+	width: 1180px;
+	height: 120px;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	background-color: #c1011b;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+}
 
+.footer-main a {
+	text-decoration: none;
+	padding: 0px 30px 0px 30px;
+	color: #fff;
+	text-transform: capitalize;
+	border-right: solid 1px white;
+}
+.footer-main a::-child{
+	border-right: none;
+}
 
 
 
