@@ -11,7 +11,8 @@ li {
 }
 
 body {
-	background-image: url(../images/bg-body.png);
+	margin: 0 auto;
+	background-image: url(../../images/bg-body.png);
 }
 
 a,
@@ -33,15 +34,17 @@ acomodados en una columna (flex-direction: column;)*/
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: center;
-
+	align-content: center;
 }
+
 header {
 	display: flex;
+	width: 100%;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 }
+
 .logo {
 	width: 180px;
 	border-radius: 90px;
@@ -77,13 +80,31 @@ Les dejo un ejemplo de como se hacen animaciones en CSS*/
 }
 /*ANIMACION DE NAVBAR HOVER*/
 .main-nav a:hover{
-    transform: scale(0.9);
+		transform: scale(0.9);
 }
 
 .banner {
 	display: flex;
 	width: 1180px;
 	padding-bottom: 30px;
+}
+/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+/*Menu para resoluciones bajas. Por default viene escondido y si se accede
+al sitio desde un celular con la resolucion indicada mas abajo, la nav se
+esconde y este se activa*/
+/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+
+.nav-menu-lores{
+	display: none;
+}
+.nav-menu-lores a {
+	width: 100%;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align: center;
+	color: white;
+	background-color: #313338;
+	padding: 10px 110px 10px 110px;
 }
 
 /*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
@@ -96,6 +117,7 @@ De nuevo, no necesitamos div de nada, 12 columnas, mas divs, nada*/
 	justify-content: space-around;
 	flex-direction: row;
 	flex-wrap: wrap;
+	align-self: center;
 	padding: 0px 0px 20px 0px;
 }
 /* a cada <article> dentro de la grilla le aplicamos esta clase. Los elementos
@@ -143,6 +165,7 @@ footer {
 	height: 120px;
 	justify-content: center;
 	align-items: center;
+	align-self: center;
 	flex-direction: row;
 	background-color: #c1011b;
 	border-top-left-radius: 20px;
@@ -156,7 +179,99 @@ footer a {
 	text-transform: capitalize;
 	border-right: solid 1px white;
 }
-footer a::-child{
+footer a::last-child {
 	border-right: none;
+}
+
+/****************/
+/*MEDIA QUIERES*/
+/**************/
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 160px)  
+and (max-device-width : 480px) {
+
+	.container {
+		max-width: 480px;
+	}
+
+	header{
+		max-width: 480px;
+	}
+
+	.main-nav {
+		display: none;
+	}
+
+	.banner {
+		display: none;
+	}
+
+	.logo {
+		width: 120px;
+	}
+
+	.nav-menu-lores {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		max-width: 480px;
+		margin: 20px 0px 20px 0px;
+		padding: 5px;
+	}
+	.products-grid {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		max-width: 480px;
+		margin: 0 auto;
+	}
+
+	.product-card {
+		max-width: 480px;
+		align-self: center;
+	}
+
+	.product-card h2 {
+		line-height: 10px;
+	}
+
+	.button_vermas {
+		display: none;
+	}
+
+	footer {
+		flex-direction: column;
+		max-width: 480px;
+		height: 200px;
+	}
+
+	footer a {
+		border-right: none;
+		text-transform: uppercase;
+		margin-top: 5px;
+		margin-bottom: 5px;
+	}
+
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+
+}
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+/* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1824px) {
+/* Styles */
 }
 
