@@ -186,8 +186,7 @@ footer a::last-child {
 /****************/
 /*MEDIA QUIERES*/
 /**************/
-
-/* Smartphones standard----------- */
+/* Smartphones (portrait and landscape) ----------- */
 @media only screen and (max-device-width : 480px) {
 
 	header{
@@ -261,13 +260,13 @@ and (max-device-width : 1024px) {
 
 }*/
 
-/* Desktops y laptops ----------- 
+/* Desktops and laptops ----------- 
 @media only screen 
 and (min-width : 1224px) {
 
 }*/
 
-/* Retina/4k ----------- 
+/* Large screens ----------- 
 @media only screen 
 and (min-width : 1824px) {
 
