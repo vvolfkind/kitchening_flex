@@ -29,9 +29,9 @@ como le digan. La landing va de arriba para abajo,
 entonces queremos todos los otros contenedores 
 acomodados en una columna (flex-direction: column;)*/
 /*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
-
 .container {
 	display: flex;
+	position: relative;
 	flex-direction: column;
 	justify-content: center;
 	align-content: center;
@@ -93,7 +93,6 @@ Les dejo un ejemplo de como se hacen animaciones en CSS*/
 al sitio desde un celular con la resolucion indicada mas abajo, la nav se
 esconde y este se activa*/
 /*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
-
 .nav-menu-lores{
 	display: none;
 }
@@ -105,6 +104,30 @@ esconde y este se activa*/
 	color: white;
 	background-color: #313338;
 	padding: 10px 110px 10px 110px;
+}
+
+/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+/* SNIPPET DE REDES SOCIALES! */
+/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+.social_snippet {
+	display: flex;
+	flex-direction: column;
+	align-self: flex-end;
+	position: fixed;
+	margin-right: 5px;
+	top: 45%;
+	z-index: 100;
+}
+
+.social_snippet a img {
+	margin: 10px;
+	max-width: 35px;
+	align-self: flex-start;
+	transition: transform 0.7s;
+}
+
+.social_snippet a img:hover {
+	transform: scale(1.8);
 }
 
 /*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
@@ -130,7 +153,6 @@ van de arriba abajo, de nuevo cambiamos la orientacion por defecto a column*/
 	width: 380px;
 	padding-bottom: 30px;
 }
-
 /*llegamos a cada elemento de la card de producto con la clase y el tag. 
 No necesitamos mas clases ni elementos ni divs ni nada nuevo, a exepcion del
 boton VER MAS*/
@@ -179,7 +201,7 @@ footer a {
 	text-transform: capitalize;
 	border-right: solid 1px white;
 }
-footer a::last-child {
+footer a:last-child {
 	border-right: none;
 }
 
@@ -201,6 +223,10 @@ footer a::last-child {
 	}
 
 	.banner {
+		display: none;
+	}
+
+	.social_snippet {
 		display: none;
 	}
 
