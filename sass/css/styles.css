@@ -117,6 +117,7 @@ esconde y este se activa*/
 	margin-right: 5px;
 	top: 45%;
 	z-index: 100;
+	background-color: black;
 }
 
 .social_snippet a img {
