@@ -80,7 +80,7 @@ Les dejo un ejemplo de como se hacen animaciones en CSS*/
 }
 /*ANIMACION DE NAVBAR HOVER*/
 .main-nav a:hover{
-		transform: scale(0.9);
+		transform: scale(1.2);
 }
 
 .banner {
@@ -118,6 +118,11 @@ esconde y este se activa*/
 	top: 45%;
 	z-index: 100;
 	background-color: black;
+	transition: transform 0.5s;
+}
+
+.social_snippet:hover{
+	transform: scale(1.2);
 }
 
 .social_snippet a img {
@@ -128,7 +133,7 @@ esconde y este se activa*/
 }
 
 .social_snippet a img:hover {
-	transform: scale(1.7);
+	transform: scale(1.8);
 }
 
 /*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
