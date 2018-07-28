@@ -115,6 +115,7 @@ esconde y este se activa*/
 	align-self: flex-end;
 	position: fixed;
 	margin-right: 5px;
+	right: 0;
 	top: 45%;
 	z-index: 100;
 	background-color: black;
